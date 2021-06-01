@@ -42,5 +42,9 @@ app.get('/profile',(req,res)=>{
     res.send(user)
 })
 
+app.get('/profile',(req,res)=>{
+    user="aagman post"
+    res.send(user)
+})
 
 app.listen(3000);

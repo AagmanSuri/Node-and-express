@@ -3,6 +3,12 @@ import express from 'express'
 
 const app= express();
 
+//middleware
+// app.use((req,res,next)=>{
+//     next();
+// })
+app.use(express.urlencoded({extended:false}));
+
 app.get('/',(req,res)=>{
     const user=[
         {
@@ -42,9 +48,10 @@ app.get('/profile',(req,res)=>{
     res.send(user)
 })
 
-app.get('/profile',(req,res)=>{
-    user="aagman post"
-    res.send(user)
+app.post('/profile',(req,res)=>{
+    //to get users data
+    console.log(req.body);
+    res.send("success");
 })
 
 app.listen(3000);

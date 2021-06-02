@@ -1,4 +1,3 @@
-
 import fs from 'fs';
 
 fs.readFile('./adventTest.txt',(err,data)=>{
